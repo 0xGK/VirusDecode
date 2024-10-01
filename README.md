@@ -109,7 +109,7 @@ To run the VirusDecode application:
     - Build the Frontend
       - Install [Node.js and npm](https://nodejs.org/) (nodejs: v18.20.4, npm: v10.7.0)
         ```bash
-        curl -fsSL https://deb.nodesource.com/setup_18.x | sudo bash - && \
+        curl -fsSL https://deb.nodesource.com/setup_18.x | sudo bash -
         sudo apt-get install -y nodejs
         sudo npm install -g serve
         ```
