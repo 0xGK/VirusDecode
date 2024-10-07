@@ -27,4 +27,7 @@ public interface JsonDataRepository extends JpaRepository<JsonData, Long> {
     @Query("DELETE FROM JsonData j WHERE j.historyName = :historyName AND j.user.id = :userId")
     void deleteByHistoryNameAndUserId(@Param("historyName") String historyName, @Param("userId") Long userId);
 
+    @Modifying
+    @Query("DELETE FROM JsonData j WHERE j.user.id = :userId")
+    void deleteByUserId(Long userId);
 }

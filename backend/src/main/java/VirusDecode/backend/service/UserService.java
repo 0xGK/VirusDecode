@@ -53,4 +53,13 @@ public class UserService {
         return user.map(User::getFirstName).orElse(null);
     }
 
+    @Transactional
+    public void deleteUserById(Long userId) {
+        userRepository.deleteById(userId);
+    }
+
+    public Long getUserIdByLoginId(String loginId) {
+        User user = userRepository.findByLoginId(loginId);
+        return user != null ? user.getId() : null;  // user가 있으면 userId 반환, 없으면 null 반환
+    }
 }

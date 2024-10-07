@@ -42,4 +42,9 @@ public class JsonDataService {
         jsonDataRepository.deleteByHistoryNameAndUserId(historyName, userId);
     }
 
+    @Transactional
+    public void deleteAllHistoriesByUserId(Long userId) {
+        jsonDataRepository.deleteByUserId(userId);
+    }
+
 }
