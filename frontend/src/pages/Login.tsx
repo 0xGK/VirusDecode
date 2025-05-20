@@ -46,7 +46,6 @@ const Login: React.FC<LoginProps> = ({history, setHistory, setShow, setMRNARecei
               throw new Error("Failed to fetch history list");
             }
             const responseData = await historyResponse.json();
-            console.log(responseData);
             setHistory(responseData);
           } catch (error) {
             console.error("Error fetching history:", error);

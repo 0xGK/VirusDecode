@@ -75,7 +75,6 @@ const Analysis: React.FC<AnalysisProps> = ({ tab, setTab, mRNAReceived, setMRNAR
         }
   
         const responseData = await serverResponse.json();
-        console.log("History details fetched successfully: ", responseData);
   
         if (responseData.alignment) {
           const alignmentJson = JSON.parse(responseData.alignment);

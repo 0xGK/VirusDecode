@@ -106,7 +106,6 @@ const ConvertModal: React.FC<ConvertModalProps> = ({ onRegionUpdate, isOpen, onC
       historyName: workingHistory,
     };
     onRegionUpdate(mRnaData.gene);
-    console.log("Data being sent to backend:", mRnaData);
 
     try {
       setIsLoading(true);

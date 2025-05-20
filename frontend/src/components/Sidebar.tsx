@@ -107,7 +107,6 @@ const Sidebar: React.FC<SidebarProps> = ({
       }
 
       const responseData = await serverResponse.json();
-      console.log("History details fetched successfully: ", responseData);
 
       if (responseData.alignment) {
         const alignmentJson = JSON.parse(responseData.alignment);
@@ -209,8 +208,6 @@ const Sidebar: React.FC<SidebarProps> = ({
           console.error("An error occurred during the request: ", error.message);
         }
       }
-    } else {
-      console.log("No name provided or no active item selected.");
     }
   };
 
